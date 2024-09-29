@@ -28,5 +28,6 @@ def grid():
     # this doesn't exist, so they will be rerouted to home page
     return render_template("grid.html")
 
+
 if __name__ == '__main__':
     app.run(debug=True)

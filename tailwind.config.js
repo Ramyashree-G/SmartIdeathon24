@@ -4,33 +4,29 @@ module.exports = {
     './static/**/*.js',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'jetbrains': ['"JetBrains Mono"', 'monospace'], // Add JetBrains Mono font
+      },
+    },
   },
   plugins: [require('daisyui')],
-   daisyui: {
+  daisyui: {
     themes: [
-    {
+      {
         cache: {
-
-"primary": "#fcc55e",
-
-"secondary": "#0f766e",
-
-"accent": "#22d3ee",
-
-"neutral": "#fbcfe8",
-
-"base-100": "#ffffff",
-
-"info": "#38bdf8",
-
-"success": "#4ade80",
-
-"warning": "#f97316",
-
-"error": "#dc2626",
-          },
+          "primary": "#fcc55e",
+          "secondary": "#0f766e",
+          "accent": "#57534e",
+          "neutral": "#fbcfe8",
+          "base-100": "#ffffff",
+         // "primary-content": "#75fb4c", //this is for sustain
+          "info": "#38bdf8",
+          "success": "#4ade80",
+          "warning": "#f97316",
+          "error": "#dc2626",
         },
+      },
       "light",
       "dark",
       "cupcake",
