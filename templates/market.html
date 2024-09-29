@@ -3,72 +3,285 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Market Place</title>
     <link href="{{ url_for('static', filename='css/output.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/hovering.css') }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
- <div class="navbar bg-base-100">
-  <div class="navbar-start">
-    <div class="dropdown">
-      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor">
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h8m-8 6h16" />
-        </svg>
-      </div>
-      <ul
-        tabindex="0"
-        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-        <li><a>Home</a></li>
-        <li><a>Market Place</a></li>
-        <li>
-          <a>Grid</a>
-          <ul class="p-2">
-            <li><a>Buy</a></li>
-            <li><a>Sell</a></li>
-          </ul>
-        </li>
-        <li><a>SDG Goals</a></li>
+<body class="font-jetbrains bg-base-100">
+<div class="navbar bg-base-100">
+    <div class="navbar-start">
+        <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor">
+                    <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 6h16M4 12h8m-8 6h16"/>
+                </svg>
+            </div>
+            <ul
+                    tabindex="0"
+                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                <li><a>Home</a></li>
+                <li><a>Market Place</a></li>
+                <li>
+                    <a>Grid</a>
+                    <ul class="p-2">
+                        <li><a>Buy</a></li>
+                        <li><a>Sell</a></li>
+                    </ul>
+                </li>
+                <li><a>SDG Goals</a></li>
 
-      </ul>
+            </ul>
+        </div>
+        <a class="btn bg-black text-primary text-xl" href="\home">Cache Memory</a>
     </div>
-    <a class="btn btn-ghost text-xl" href="\home">Cache Memory</a>
-  </div>
-  <div class="navbar-center hidden lg:flex">
-    <ul class="menu menu-horizontal px-1">
-      <li><a class=" btn-outline btn-secondary" href="\market">Market Place</a></li>
-      <li>
-        <details>
-          <summary>Grid</summary>
-          <ul class="p-2">
-            <li><a class=" btn-outline btn-warning">Sell</a></li>
-            <li><a class=" btn-outline btn-success">Buy</a></li>
-          </ul>
-        </details>
-      </li>
-      <li><a class=" btn-outline btn-primary" href="/sdg">SDG Goals</a></li>
-    </ul>
-  </div>
-  <div class="navbar-end">
-    <a class="btn btn-outline btn-primary" href="{{ url_for('static', filename='pdf/Cache Memory.pdf') }}" target="_blank">Research</a>
-  </div>
+    <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+            <li><a class=" btn-outline btn-secondary" href="\market">Market Place</a></li>
+            <li>
+                <details>
+                    <summary>Grid</summary>
+                    <ul class="p-2">
+                        <li><a class=" btn-outline btn-warning">Sell</a></li>
+                        <li><a class=" btn-outline btn-success">Buy</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li><a class=" btn-outline btn-primary" href="/sdg">SDG Goals</a></li>
+        </ul>
+    </div>
+    <div class="navbar-end">
+        <a class="btn btn-outline btn-primary" href="{{ url_for('static', filename='pdf/Cache Memory.pdf') }}"
+           target="_blank">Research</a>
+    </div>
 </div>
 
+
 <header class="p-6 bg-base-100 text-secondary text-center">
-    <h1 class="text-4xl fg-secondary font-bold">Welcome to Solar Energy Marketplace 🌞</h1>
+    <h1 class="text-5xl fg-secondary font-bold">Welcome to Solar Energy Marketplace 🌞</h1>
+    <small class="text-primary ">One place to compare, one to place to find, one place to buy</small>
 </header>
+<h2 class="text-3xl m-5">Solar Panels </h2>
+<section class="flex flex-wrap center justify-around">
+
+    <div class="card bg-base-200 w-80 shadow-xl m-5">
+        <figure>
+            <img src="{{ url_for('static', filename='images/mpsp4.jpg') }}" alt="Solar Panels"/>
+        </figure>
+        <div class="card-body">
+            <h2 class="card-title">
+                Industrial Solar Panels
+                <b class="badge badge-neutral whitespace-nowrap ">In Stock</b>
+            </h2>
+            <p class="default-content">Industrial Solar Panels for increased power generation</p>
+            <div class="card-actions default-content justify-end">
+                <div class="badge badge-primary badge-outline">Energy Generation</div>
+                <div class="badge badge-success">Best-Seller</div>
+            </div>
+
+            <div class="hover-content hidden-details">
+                <p><strong>Company:</strong> Suriya Co.</p>
+                <p><strong>Location:</strong> Pune, India</p>
+                <p><strong>Contact:</strong> +91 ----------</p>
+            </div>
+        </div>
+    </div>
 
 
-<footer class="p-6 bg-primary text-white text-center">
-    <p>&copy; 2024 [Platform Name] - All Rights Reserved</p>
+    <div class="card bg-base-200 w-80 shadow-xl m-5">
+        <figure>
+            <img src="{{ url_for('static', filename='images/mpsp.jpg') }}" alt="Solar Panels"/>
+        </figure>
+        <div class="card-body">
+            <h2 class="card-title">
+                Solar Panels
+                <b class="badge badge-neutral">NEW</b>
+            </h2>
+            <p class="default-content">Good Old Solar Panels, Perfect for Solar Energy Production</p>
+            <div class="card-actions default-content justify-end">
+                <div class="badge badge-primary badge-outline">Energy Generation</div>
+                <div class="badge badge-success">Best-Seller</div>
+            </div>
+
+            <div class="hover-content hidden-details">
+                <p><strong>Company:</strong> Indian Solar Exchange</p>
+                <p><strong>Location:</strong> Bengaluru, India</p>
+                <p><strong>Contact:</strong> +91 ----------</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card bg-base-200 w-80 shadow-xl m-5">
+        <figure>
+            <img src="{{ url_for('static', filename='images/mpsp2.jpg') }}" alt="Solar Panels"/>
+        </figure>
+        <div class="card-body">
+            <h2 class="card-title">
+                Small Solar Panels
+                <b class="badge badge-error whitespace-nowrap">No Stock</b>
+            </h2>
+            <p class="default-content">Smaller Solar Panels for smaller energy needs</p>
+            <div class="card-actions default-content justify-end">
+                <div class="badge badge-primary badge-outline">Energy Generation</div>
+            </div>
+
+            <div class="hover-content hidden-details">
+                <p><strong>Company:</strong> Solar Energy Co.</p>
+                <p><strong>Location:</strong> Mumbai, India</p>
+                <p><strong>Contact:</strong> +91 ----------</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card bg-base-200 w-80 shadow-xl m-5">
+        <figure>
+            <img src="{{ url_for('static', filename='images/mpsp3.jpg') }}" alt="Solar Panels"/>
+        </figure>
+        <div class="card-body">
+            <h2 class="card-title">
+                Subsidized Solar Panel
+                <b class="badge badge-warning whitespace-nowrap">Less Stock</b>
+            </h2>
+            <p class="default-content">Subsidized Solar Panel for rural region.</p>
+            <div class="card-actions default-content justify-end">
+                <div class="badge badge-primary badge-outline">Energy Generation</div>
+            </div>
+
+            <div class="hover-content hidden-details">
+                <p><strong>Company:</strong> Aditya sons and co.</p>
+                <p><strong>Location:</strong> Daman and Diu, India</p>
+                <p><strong>Contact:</strong> +91 ----------</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card bg-base-200 w-80 shadow-xl m-5">
+        <figure>
+            <img src="{{ url_for('static', filename='images/mpsp5.jpg') }}" alt="Solar Panels"/>
+        </figure>
+        <div class="card-body">
+            <h2 class="card-title">
+                Solar Panel Farm House
+            </h2>
+            <p class="default-content">Please contact if interested in at least 500 panels </p>
+            <div class="card-actions default-content justify-end">
+                <div class="badge badge-primary badge-outline">Energy Generation</div>
+            </div>
+
+            <div class="hover-content hidden-details">
+                <p><strong>Company:</strong> Solar Energy Co.</p>
+                <p><strong>Location:</strong> New York, USA</p>
+                <p><strong>Contact:</strong> (123) 456-7890</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- this is section 2-->
+<h2 class="text-3xl m-5">Solar Panel Servicing</h2>
+<section class="flex flex-wrap center justify-around">
+
+    <div class="card bg-base-200 w-80 shadow-xl m-5">
+        <figure>
+            <img src="{{ url_for('static', filename='images/mpspm.jpg') }}" alt="Solar Panels"/>
+        </figure>
+        <div class="card-body">
+            <h2 class="card-title">
+                Industrial Solar Panel Maintenance
+                <b class="badge badge-warning whitespace-nowrap ">4 business days</b>
+            </h2>
+            <p class="default-content">World Class Certified Industrial Solar Panel maintenance at your location </p>
+            <div class="card-actions default-content justify-end">
+                <div class="badge badge-secondary badge-outline">Maintenance</div>
+                <div class="rating">
+                    <input type="radio" name="rating-1" class="mask mask-star"/>
+                    <input type="radio" name="rating-1" class="mask mask-star" />
+                    <input type="radio" name="rating-1" class="mask mask-star"/>
+                    <input type="radio" name="rating-1" class="mask mask-star"checked="checked"/>
+                    <input type="radio" name="rating-1" class="mask mask-star"/>
+                </div>
+            </div>
+
+            <div class="hover-content hidden-details">
+                <p><strong>Company:</strong> Suriya Co.</p>
+                <p><strong>Location:</strong> Pune, India</p>
+                <p><strong>Contact:</strong> +91 ----------</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card bg-base-200 w-80 shadow-xl m-5">
+        <figure>
+            <img src="{{ url_for('static', filename='images/mpspm2.jpg') }}" alt="Solar Panels"/>
+        </figure>
+        <div class="card-body">
+            <h2 class="card-title">
+                Solar Panel Maintenance Agent
+                <b class="badge badge-success whitespace-nowrap">12 Hours</b>
+            </h2>
+            <p class="default-content">Quick and accurate maintenance at your doorstep</p>
+            <div class="card-actions default-content justify-end">
+                <div class="badge badge-secondary badge-outline">Maintenance</div>
+                <div class="rating">
+                    <input type="radio" name="rating-2" class="mask mask-star"/>
+                    <input type="radio" name="rating-2" class="mask mask-star" />
+                    <input type="radio" name="rating-2" class="mask mask-star"/>
+                    <input type="radio" name="rating-2" class="mask mask-star"/>
+                    <input type="radio" name="rating-2" class="mask mask-star" checked="checked" />
+                </div>
+            </div>
+
+            <div class="hover-content hidden-details">
+                <p><strong>Company:</strong> Indian Solar Exchange</p>
+                <p><strong>Location:</strong> Bengaluru, India</p>
+                <p><strong>Contact:</strong> +91 ----------</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<h2 class="text-3xl m-5">Solar Batteries</h2>
+<section class="flex flex-wrap center justify-around">
+
+    <div class="card bg-base-200 w-80 shadow-xl m-5">
+        <figure>
+            <img src="{{ url_for('static', filename='images/mpsb.jpg') }}" alt="Solar Panels"/>
+        </figure>
+        <div class="card-body">
+            <h2 class="card-title">
+                Military Grade Batteries
+                <b class="badge badge-neutral whitespace-nowrap ">In Stock</b>
+            </h2>
+            <p class="default-content">Most Efficient Batteries</p>
+            <div class="card-actions default-content justify-end">
+                <div class="badge badge-info badge-outline">Energy Storage</div>
+                <div class="badge badge-success">Best-Seller</div>
+            </div>
+
+            <div class="hover-content hidden-details">
+                <p><strong>Company:</strong> Suriya Co.</p>
+                <p><strong>Location:</strong> Pune, India</p>
+                <p><strong>Contact:</strong> +91 ----------</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer class="p-6 bg-primary text-center mt-4">
+    <p>&copy; <strong class="text-primary bg-black">Cache Memory</strong> 2024 - All Rights Reserved</p>
 </footer>
 
 </body>

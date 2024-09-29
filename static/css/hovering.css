@@ -1,0 +1,18 @@
+/* Default content is visible by default */
+.default-content {
+    display: block;
+}
+
+/* Hover content is hidden by default */
+.hidden-details {
+    display: none;
+}
+
+/* On card hover, switch visibility */
+.card:hover .default-content {
+    display: none;
+}
+
+.card:hover .hidden-details {
+    display: block;
+}

@@ -67,11 +67,23 @@
 
 <div class="container mx-auto p-6">
     <section class="mt-12 ml-12 mr-12 mb-5 bg-base-100 p-6 rounded-lg text-center">
-        <h2 class="m-2 text-5xl font-semibold text-center text-secondary">Welcome to the Future of Solar Energy</h2>
-        <p><strong class="text-accent font-bold  "> Where Sustainable Choices Are Instantly Available, One Solar Panel
-            at a Time! </strong></p>
+        <h2 class="m-2 text-5xl font-semibold text-primary">
+            The Future of Solar Energy🎉
+        </h2>
+        <p><strong class="text-accent font-bold">Where Sustainable Choices Are Instantly Available, One Solar Panel at a
+            Time!</strong></p>
     </section>
+    <img src="{{ url_for('static', filename='images/hsp.svg') }}" alt="Solar Panels"
+         class="inline-block mt-12 ml-12 mr-12 mb-1 bg-base-100 p-8 rounded-lg">
+    <small class="text-gray-500 block mt-2 text-center">
+        Image by
+        <a class="text-primary"
+           href="https://pixabay.com/users/jamal39-42080358/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8593759">Gazi
+            Jamal Uddin</a> from
+        <a class="text-neutral"
+           href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=8593759">Pixabay</a>
 
+    </small>
     <section class="m-12 bg-base-100 p-8 rounded-lg">
         <h2 class="text-2xl font-semibold text-info flex items-center">
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#38bdf8"
@@ -112,6 +124,80 @@
     </section>
 
     <section class="m-12 bg-base-100 p-8 rounded-lg">
+        <h2 class="m-2 text-4xl font-semibold text-secondary text-center">
+            Stats
+        </h2>
+        <small class="text-gray-500 block m-4 mt-2 text-center ">
+            Data collected from
+            <a class="text-primary" href="https://mnre.gov.in/solar-overview/"> Ministry of New and Renewable
+                Energy(MNRE)</a> and
+            <a class="text-secondary"
+               href="https://www.weforum.org/agenda/2021/01/india-renewable-energy-clean-pandemic-climate-change-sustainability/">
+                World Economic Forum (WEF).</a>
+
+
+        </small>
+        <div class="container mx-auto p-6 flex flex-wrap justify-center items-center">
+            <!-- Solar Panel Counter Section (Horizontal with Icons) -->
+            <div class="counter-container bg-base-200 p-6 rounded-lg text-center flex justify-between items-center m-5">
+                <div class="counter flex flex-row items-center gap-4 m-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+                         fill="#46152F">
+                        <path d="M200.67-160v-383.33L80-451.33 40-504l440-336 172 131.33V-800h106.67v172.67L920-504l-40.67 52.67L758.67-544v384h-232v-240h-93.34v240H200.67Zm66.66-66.67h99.34v-240h226.66v240H692v-367.66l-212-162-212.67 162v367.66Zm129.34-339.66h166.66q0-32.67-25-53.84-25-21.16-58.33-21.16t-58.33 21.06q-25 21.06-25 53.94Zm-30 339.66v-240h226.66v240-240H366.67v240Z"/>
+                    </svg>
+                    <div>
+                        <h2 id="solarHomes" class="text-3xl">{{ counter_values.solar_homes }}</h2>
+                        <p>New Solar Homes ☀️ Installed</p>
+                    </div>
+                </div>
+
+                <div class="counter flex flex-row items-center gap-4 m-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+                         fill="#46152F">
+                        <path d="M440-364q-15.3 0-25.65-10.35Q404-384.7 404-400v-160q0-15.3 10.35-25.65Q424.7-596 440-596h120q15.3 0 25.65 10.35Q596-575.3 596-560v160q0 15.3-10.35 25.65Q575.3-364 560-364H440Zm16-52h88v-128h-88v128Zm-296 52q-15.3 0-25.65-10.35Q124-384.7 124-400v-160q0-15.3 10.35-25.65Q144.7-596 160-596h120q15.3 0 25.65 10.35Q316-575.3 316-560v36h-52v-20h-88v128h88v-20h52v35.79q0 15.21-10.35 25.71T280-364H160Zm524 120v-96q0-15.3 10.35-25.65Q704.7-376 720-376h84v-48H684v-52h136q15.3 0 25.65 10.35Q856-455.3 856-440v60q0 15.3-10.35 25.65Q835.3-344 820-344h-84v48h120v52H684Z"/>
+                    </svg>
+                    <div>
+                        <h2 id="co2Saved" class="text-3xl">{{ counter_values.co2_saved }}</h2>
+                        <p>CO2 Emissions 🌫️ Saved (kg)</p>
+                    </div>
+                </div>
+
+                <div class="counter flex flex-row items-center gap-4 m-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+                         fill="#46152F">
+                        <path d="M480-200q116.67 0 198-81.67 81.33-81.66 82-198.33v-280H480q-116.67.67-198.33 82Q200-596.67 200-480t81.67 198.33Q363.33-200 480-200Zm-51-92.33 199.33-178Q638-479 634-491q-4-12-17.33-14l-156-15.33L554-648.67q3.67-5 3.5-10.16-.17-5.17-4.17-9.84-4.66-5-11-4.83-6.33.17-11.33 4.83l-198.33 178Q323-482 327-470q4 12 17.33 14l156 15.33L406-312.33q-3.67 5-3.33 10.16.33 5.17 5 9.84 4.66 4.66 10.5 4.66 5.83 0 10.83-4.66Zm51 159q-63.33 0-119.17-20.84Q305-175 259.33-212.33l-69 69q-5.33 5.33-11.16 7.66-5.84 2.34-12.5 2.34-13.67 0-23.5-9.84-9.84-9.83-9.84-23.5 0-6.66 2.34-12.5 2.33-5.83 7.66-11.16l69-69Q175-305 154.17-360.83 133.33-416.67 133.33-480q0-144.67 101-245.67t245.67-101h346.67V-480q0 144.67-101 245.67T480-133.33ZM480-480Z"/>
+                    </svg>
+                    <div>
+                        <h2 id="energyGenerated" class="text-3xl">{{ counter_values.energy_generated }}</h2>
+                        <p>Total Energy ⚡ Generated (Wh)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            let solarHomes = {{counter_values.solar_homes}};
+            let co2Saved = {{counter_values.co2_saved}};
+            let energyGenerated = {{ counter_values.energy_generated }};
+
+            let incrementSolarHomes = 0.0019;
+            let incrementCo2Saved = 3.8;
+            let incrementEnergyGenerated = 9500;
+
+            function updateCounters() {
+                solarHomes += incrementSolarHomes;
+                co2Saved += incrementCo2Saved;
+                energyGenerated += incrementEnergyGenerated;
+
+                document.getElementById('solarHomes').innerText = Math.floor(solarHomes).toLocaleString();
+                document.getElementById('co2Saved').innerText = Math.floor(co2Saved).toLocaleString();
+                document.getElementById('energyGenerated').innerText = Math.floor(energyGenerated).toLocaleString();
+            }
+
+            setInterval(updateCounters, 100);
+            updateCounters();
+        </script>
+    </section>
+    <section class="m-12 bg-base-100 p-8 rounded-lg">
         <h2 class="text-2xl font-semibold text-warning flex items-center">
             <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
                  fill="#f97316">
@@ -143,18 +229,18 @@
             reducing carbon emissions and promoting a cleaner, greener environment. Our platform supports the United
             Nations’ Sustainable Development Goals (SDGs), particularly:</p>
         <ul class="list-disc pl-5">
-            <li><strong>SDG 7:</strong> Affordable and Clean Energy</li>
-            <li><strong>SDG 9:</strong> Industry, Innovation, and Infrastructure</li>
-            <li><strong>SDG 11:</strong> Sustainable Cities and Communities</li>
-            <li><strong>SDG 13:</strong> Climate Action</li>
+            <li><strong>SDG 7:</strong> Affordable and Clean Energy 🌲</li>
+            <li><strong>SDG 9:</strong> Industry, Innovation, and Infrastructure 🏭</li>
+            <li><strong>SDG 11:</strong> Sustainable Cities and Communities 🌇</li>
+            <li><strong>SDG 13:</strong> Climate Action 🌏</li>
         </ul>
         <p>Join us in accelerating the adoption of solar energy, reducing our collective carbon footprint, and building
             a more sustainable future for generations to come.</p>
     </section>
 </div>
 
-<footer class="p-6 bg-primary  text-center">
-    <p>&copy; <strong class="text-primary bg-black">Cache Memory</strong> 2024  - All Rights Reserved</p>
+<footer class="p-6 bg-primary  text-center mt-4">
+    <p>&copy; <strong class="text-primary bg-black">Cache Memory</strong> 2024 - All Rights Reserved</p>
 </footer>
 </body>
 </html>

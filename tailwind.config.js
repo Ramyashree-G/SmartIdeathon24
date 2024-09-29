@@ -8,7 +8,25 @@ module.exports = {
       fontFamily: {
         'jetbrains': ['"JetBrains Mono"', 'monospace'], // Add JetBrains Mono font
       },
+      colors: {
+        'red': '#FF0000',
+        'green': '#00FF00',
+        'blue': '#0000FF',
+        'yellow': '#FFFF00',
+        'purple': '#800080',
+        'orange': '#FFA500',
+        'pink': '#FFC0CB',
+        'cyan': '#00FFFF',
+        'lime': '#00FF00',
+        'indigo': '#4B0082',
+        'violet': '#EE82EE',
+        'brown': '#A52A2A',
+        'grey': '#808080',
+        'black': '#000000',
+        'white': '#FFFFFF',
+        },
     },
+
   },
   plugins: [require('daisyui')],
   daisyui: {
