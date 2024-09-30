@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+    <link rel=icon href="{{ url_for('static', filename='images/favicon/favicon 256x256.ico') }}"
+          type="image/vnd.microsoft.icon">
     <link href="{{ url_for('static', filename='css/output.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -41,7 +43,9 @@
 
             </ul>
         </div>
-        <a class="btn bg-black text-primary text-xl" href="\home">Cache Memory</a>
+        <a class="btn bg-black text-primary text-xl" href="\home">
+            Cache Memory
+        </a>
     </div>
     <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
@@ -123,7 +127,7 @@
         </ul>
     </section>
 
-    <section class="m-12 bg-base-100 p-8 rounded-lg">
+    <section class="m-12 bg-base-100 p-8 rounded-lg ">
         <h2 class="m-2 text-4xl font-semibold text-secondary text-center">
             Stats
         </h2>
@@ -138,9 +142,8 @@
 
         </small>
         <div class="container mx-auto p-6 flex flex-wrap justify-center items-center">
-            <!-- Solar Panel Counter Section (Horizontal with Icons) -->
-            <div class="counter-container bg-base-200 p-6 rounded-lg text-center flex justify-between items-center m-5">
-                <div class="counter flex flex-row items-center gap-4 m-4">
+            <div class="counter-container bg-base-200 p-6 rounded-lg text-center flex flex-col md:flex-row justify-between items-center m-5">
+                <div class="counter flex flex-col md:flex-row items-center gap-4 m-4">
                     <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
                          fill="#46152F">
                         <path d="M200.67-160v-383.33L80-451.33 40-504l440-336 172 131.33V-800h106.67v172.67L920-504l-40.67 52.67L758.67-544v384h-232v-240h-93.34v240H200.67Zm66.66-66.67h99.34v-240h226.66v240H692v-367.66l-212-162-212.67 162v367.66Zm129.34-339.66h166.66q0-32.67-25-53.84-25-21.16-58.33-21.16t-58.33 21.06q-25 21.06-25 53.94Zm-30 339.66v-240h226.66v240-240H366.67v240Z"/>
@@ -151,7 +154,7 @@
                     </div>
                 </div>
 
-                <div class="counter flex flex-row items-center gap-4 m-4">
+                <div class="counter flex flex-col md:flex-row items-center gap-4 m-4">
                     <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
                          fill="#46152F">
                         <path d="M440-364q-15.3 0-25.65-10.35Q404-384.7 404-400v-160q0-15.3 10.35-25.65Q424.7-596 440-596h120q15.3 0 25.65 10.35Q596-575.3 596-560v160q0 15.3-10.35 25.65Q575.3-364 560-364H440Zm16-52h88v-128h-88v128Zm-296 52q-15.3 0-25.65-10.35Q124-384.7 124-400v-160q0-15.3 10.35-25.65Q144.7-596 160-596h120q15.3 0 25.65 10.35Q316-575.3 316-560v36h-52v-20h-88v128h88v-20h52v35.79q0 15.21-10.35 25.71T280-364H160Zm524 120v-96q0-15.3 10.35-25.65Q704.7-376 720-376h84v-48H684v-52h136q15.3 0 25.65 10.35Q856-455.3 856-440v60q0 15.3-10.35 25.65Q835.3-344 820-344h-84v48h120v52H684Z"/>
@@ -162,7 +165,7 @@
                     </div>
                 </div>
 
-                <div class="counter flex flex-row items-center gap-4 m-4">
+                <div class="counter flex flex-col md:flex-row items-center gap-4 m-4">
                     <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
                          fill="#46152F">
                         <path d="M480-200q116.67 0 198-81.67 81.33-81.66 82-198.33v-280H480q-116.67.67-198.33 82Q200-596.67 200-480t81.67 198.33Q363.33-200 480-200Zm-51-92.33 199.33-178Q638-479 634-491q-4-12-17.33-14l-156-15.33L554-648.67q3.67-5 3.5-10.16-.17-5.17-4.17-9.84-4.66-5-11-4.83-6.33.17-11.33 4.83l-198.33 178Q323-482 327-470q4 12 17.33 14l156 15.33L406-312.33q-3.67 5-3.33 10.16.33 5.17 5 9.84 4.66 4.66 10.5 4.66 5.83 0 10.83-4.66Zm51 159q-63.33 0-119.17-20.84Q305-175 259.33-212.33l-69 69q-5.33 5.33-11.16 7.66-5.84 2.34-12.5 2.34-13.67 0-23.5-9.84-9.84-9.83-9.84-23.5 0-6.66 2.34-12.5 2.33-5.83 7.66-11.16l69-69Q175-305 154.17-360.83 133.33-416.67 133.33-480q0-144.67 101-245.67t245.67-101h346.67V-480q0 144.67-101 245.67T480-133.33ZM480-480Z"/>
@@ -174,6 +177,7 @@
                 </div>
             </div>
         </div>
+
         <script>
             let solarHomes = {{counter_values.solar_homes}};
             let co2Saved = {{counter_values.co2_saved}};
