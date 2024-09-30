@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="cache">
+<html data-theme="cache" lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Sustainable Development Goals</title>
-    <link rel=icon href="{{ url_for('static', filename='images/favicon/favicon 256x256.ico') }}" type="image/vnd.microsoft.icon">
+    <link href="{{ url_for('static', filename='images/favicon/favicon 256x256.ico') }}" rel=icon
+          type="image/vnd.microsoft.icon">
     <link href="{{ url_for('static', filename='css/output.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -12,37 +13,39 @@
 <div class="navbar bg-base-100">
     <div class="navbar-start">
         <div class="dropdown">
-            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <div class="btn btn-ghost lg:hidden" role="button" tabindex="0">
                 <svg
-                        xmlns="http://www.w3.org/2000/svg"
                         class="h-5 w-5"
                         fill="none"
+                        stroke="currentColor"
                         viewBox="0 0 24 24"
-                        stroke="currentColor">
+                        xmlns="http://www.w3.org/2000/svg">
                     <path
+                            d="M4 6h16M4 12h8m-8 6h16"
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M4 6h16M4 12h8m-8 6h16"/>
+                            stroke-width="2"/>
                 </svg>
             </div>
             <ul
-                    tabindex="0"
-                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                <li><a>Home</a></li>
-                <li><a>Market Place</a></li>
+                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+                    tabindex="0">
+                <li><a href="\home">Home</a></li>
+                <li><a href="\market">Market Place</a></li>
                 <li>
-                    <a>Grid</a>
+                    <p>Grid</p>
                     <ul class="p-2">
-                        <li><a>Buy</a></li>
-                        <li><a>Sell</a></li>
+                        <li><a href="\grid\buy">Buy</a></li>
+                        <li><a href="\grid\sell">Sell</a></li>
                     </ul>
                 </li>
-                <li><a>SDG Goals</a></li>
+                <li><a href="/sdg">SDG Goals</a></li>
 
             </ul>
         </div>
-        <a class="btn bg-black text-primary text-xl" href="\home">Cache Memory</a>
+        <a class="btn bg-black text-primary text-xl" href="\home">
+            Cache Memory
+        </a>
     </div>
     <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
@@ -51,8 +54,8 @@
                 <details>
                     <summary>Grid</summary>
                     <ul class="p-2">
-                        <li><a class=" btn-outline btn-warning">Sell</a></li>
-                        <li><a class=" btn-outline btn-success">Buy</a></li>
+                        <li><a class=" btn-outline btn-warning" href="\grid\sell">Sell</a></li>
+                        <li><a class=" btn-outline btn-success" href="\grid\buy">Buy</a></li>
                     </ul>
                 </details>
             </li>
@@ -64,5 +67,496 @@
            target="_blank">Research</a>
     </div>
 </div>
+
+<!--SDG GOAL - 7 ; uff i am tired duh-->
+
+<div class=" text-sdg-7 m-12 p-10 border-4 rounded-lg border-sdg-7">
+    <!-- Title Section -->
+    <div class="text-center">
+        <h1 class="text-5xl font-bold">Affordable and Clean Energy : SDG - 7</h1>
+        <p class="mt-4 text-2xl">Ensure access to affordable, reliable, sustainable, and modern energy for all.</p>
+    </div>
+
+    <!-- Image and Icon Section -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 ">
+        <div class="flex justify-center">
+            <img alt="Affordable Energy Icon" class=""
+                 src="{{ url_for('static', filename='images/sdg/E_Elyx_07.png') }}">
+        </div>
+        <div class="flex justify-center items-center border-2 border-black">
+            <div class="bg-white text-yellow-500 p-5 rounded-lg shadow-lg">
+                <div class="flex flex-col justify-center items-center">
+                    <h2 class="text-4xl font-semibold">Why It Matters</h2>
+                    <p class="mt-4 text-lg text-gray-800">
+                        Access to energy is a critical enabler of business, education, and healthcare. However, 789
+                        million people around the world still lack access to electricity.
+                    </p>
+                    <p class="mt-4 text-lg text-gray-800">
+                        Investing in renewable energy, energy efficiency, and sustainable energy solutions is key to
+                        combating climate change and providing clean energy for all.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GIF Section (Visual Highlight) -->
+    <div class="flex justify-center m-5 mt-10   ">
+        <img alt="Affordable Energy GIF" class="rounded-lg shadow-lg w-96 border-2 border-black"
+             src="{{ url_for('static', filename='images/sdg/E_GIF_07.gif') }} ">&nbsp;
+        <img alt="Make Every Day Count"
+             class="rounded-lg shadow-lg w-96 border-2 border-black"
+             src="{{ url_for('static', filename='images/sdg/7_SDG_MakeEveryDayCount_Gifs_GDU.gif') }} ">
+    </div>
+
+    <!-- Stats Section -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-10">
+        <div class="card bg-base shadow-xl border-2 border-black">
+            <div class="card-body">
+                <h2 class="card-title">789 million people</h2>
+                <p>Lack access to electricity, primarily in sub-Saharan Africa.</p>
+            </div>
+        </div>
+
+        <div class="card bg-base shadow-xl border-2 border-black ">
+            <div class="card-body">
+                <h2 class="card-title">17% Share</h2>
+                <p>Of renewables in total energy consumption as of 2017.</p>
+            </div>
+        </div>
+
+        <div class="card bg-base shadow-xl border-2 border-black">
+            <div class="card-body">
+                <h2 class="card-title">$21.4 billion</h2>
+                <p>Financial flows to developing countries for renewable energy in 2017.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PDF and Resource Links Section -->
+    <div class="mt-10">
+        <h2 class="text-center text-3xl font-bold">Explore More Resources</h2>
+        <div class="flex flex-wrap justify-center mt-5">
+            <!-- PDF: Why It Matters -->
+            <a class="rounded btn-white border border-sdg-7 m-2 p-2 shadow-xl"
+               href=" {{ url_for('static', filename='images/sdg/7_Why-It-Matters-2020.pdf') }}"
+               target="_blank">
+                <img alt="PDF Icon"
+                     class="w-6 h-6 inline mr-2"
+                     src="https://cdn-icons-png.flaticon.com/512/10007/10007105.png">
+                Why Affordable Energy Matters
+            </a>
+
+            <!-- PDF: Infographics -->
+            <a class="rounded btn-white border border-sdg-7 m-2 p-2 shadow-xl"
+               href="{{ url_for('static', filename='images/sdg/E_infographics_07.pdf') }} " target="_blank">
+                <img alt="PDF Icon" class="w-6 h-6 inline mr-2"
+                     src="https://cdn-icons-png.flaticon.com/512/10007/10007105.png">
+                Infographics on Energy Access
+            </a>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="mt-10 text-center">
+        <a class="btn bg-sdg-7 btn-lg" href="https://sdgs.un.org/goals/goal7" target="_blank">Learn More</a>
+    </div>
+</div>
+
+
+<!--SDG GOAL - 8 ; -->
+
+<div class=" text-sdg-8 m-12  p-10 border-4 rounded-lg border-sdg-8">
+    <!-- Title Section -->
+    <div class="text-center">
+        <h1 class="text-5xl font-bold">Decent Work and Economic Growth : SDG - 8</h1>
+        <p class="mt-4 text-2xl">Promote sustained, inclusive, and sustainable economic growth, full and productive
+            employment, and decent work for all.</p>
+    </div>
+
+    <!-- Image and Icon Section -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 ">
+        <div class="flex justify-center">
+            <img alt="Affordable Energy Icon" class=""
+                 src="{{ url_for('static', filename='images/sdg/E_Elyx_08.png') }}">
+        </div>
+        <div class="flex justify-center items-center border-2 border-black">
+            <div class="bg-white text-yellow-500 p-5 rounded-lg shadow-lg">
+                <div class="flex flex-col justify-center items-center">
+                    <h2 class="text-4xl font-semibold">Why It Matters</h2>
+                    <p class="mt-4 text-lg text-gray-800">
+                        Sustained and inclusive economic growth can drive progress, create decent jobs for all, and
+                        improve living standards.
+                    </p>
+                    <p class="mt-4 text-lg text-gray-800">
+                        Investing in education, skills training, and sustainable employment solutions is essential to
+                        ensure decent work opportunities for all and to foster economic recovery.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GIF Section (Visual Highlight) -->
+    <div class="flex justify-center m-5 mt-10   ">
+        <img alt="Affordable Energy GIF" class="rounded-lg shadow-lg w-96 border-2 border-black"
+             src="{{ url_for('static', filename='images/sdg/E_GIF_08.gif') }} ">&nbsp;
+        <img alt="Make Every Day Count"
+             class="rounded-lg shadow-lg w-96 border-2 border-black"
+             src="{{ url_for('static', filename='images/sdg/8_SDG_MakeEveryDayCount_Gifs_GDU.gif') }} ">
+    </div>
+
+    <!-- Stats Section -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-10">
+        <div class="card bg-base shadow-xl border-2 border-black">
+            <div class="card-body">
+                <h2 class="card-title">1.6 Billion Workers</h2>
+                <p>Workers in the informal economy risked losing their livelihoods during the pandemic.</p>
+            </div>
+        </div>
+
+        <div class="card bg-base shadow-xl border-2 border-black">
+            <div class="card-body">
+                <h2 class="card-title">22% Youth Unemployment</h2>
+                <p>In 2019, 22% of the world's youth were not engaged in education, employment, or training.</p>
+            </div>
+        </div>
+
+        <div class="card bg-base shadow-xl border-2 border-black">
+            <div class="card-body">
+                <h2 class="card-title">400 Million Job Losses</h2>
+                <p>Estimated number of full-time job losses due to COVID-19 in the second quarter of 2020.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- PDF and Resource Links Section -->
+    <div class="mt-10">
+        <h2 class="text-center text-3xl font-bold">Explore More Resources</h2>
+        <div class="flex flex-wrap justify-center mt-5">
+            <!-- PDF: Why It Matters -->
+            <a class="rounded btn-white border border-sdg-8 m-2 p-2 shadow-xl"
+               href=" {{ url_for('static', filename='images/sdg/8_Why-It-Matters-2020.pdf') }}"
+               target="_blank">
+                <img alt="PDF Icon"
+                     class="w-6 h-6 inline mr-2"
+                     src="https://cdn-icons-png.flaticon.com/512/10007/10007105.png">
+                Why Economic Growth Matters
+            </a>
+
+            <!-- PDF: Infographics -->
+            <a class="rounded btn-white border border-sdg-8 m-2 p-2 shadow-xl"
+               href="{{ url_for('static', filename='images/sdg/E_infographics_08.pdf') }} " target="_blank">
+                <img alt="PDF Icon" class="w-6 h-6 inline mr-2"
+                     src="https://cdn-icons-png.flaticon.com/512/10007/10007105.png">
+                Infographics on Decent Work
+            </a>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="mt-10 text-center">
+        <a class="btn bg-sdg-8 btn-lg" href="https://sdgs.un.org/goals/goal8" target="_blank">Learn More</a>
+    </div>
+</div>
+
+
+<!-- SDG GOAL - 9 -->
+
+<div class="text-sdg-9 m-12 p-10 border-4 rounded-lg border-sdg-9">
+    <!-- Title Section -->
+    <div class="text-center">
+        <h1 class="text-5xl font-bold">Industry, Innovation, and Infrastructure: SDG - 9</h1>
+        <p class="mt-4 text-2xl">Build resilient infrastructure, promote inclusive and sustainable industrialization,
+            and foster innovation.</p>
+    </div>
+
+    <!-- Image and Icon Section -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
+        <div class="flex justify-center">
+            <img alt="Industry, Innovation, and Infrastructure Icon" class=""
+                 src="{{ url_for('static', filename='images/sdg/E_Elyx_9.png') }}">
+        </div>
+        <div class="flex justify-center items-center border-2 border-black">
+            <div class="bg-white text-sdg-9 p-5 rounded-lg shadow-lg">
+                <div class="flex flex-col justify-center items-center">
+                    <h2 class="text-4xl font-semibold">Why It Matters</h2>
+                    <p class="mt-4 text-lg text-gray-800">
+                        Infrastructure, industrialization, and innovation are critical to driving economic growth,
+                        reducing inequality, and advancing climate action.
+                    </p>
+                    <p class="mt-4 text-lg text-gray-800">
+                        Without sustainable industrialization and resilient infrastructure, achieving economic progress
+                        and improving living standards becomes increasingly challenging, particularly in developing
+                        countries.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GIF Section (Visual Highlight) -->
+    <div class="flex justify-center m-5 mt-10">
+        <img alt="Industry, Innovation, and Infrastructure GIF" class="rounded-lg shadow-lg w-96 border-2 border-black"
+             src="{{ url_for('static', filename='images/sdg/E_GIF_09.gif') }}">&nbsp;
+        <img alt="Make Every Day Count"
+             class="rounded-lg shadow-lg w-96 border-2 border-black"
+             src="{{ url_for('static', filename='images/sdg/9_SDG_MakeEveryDayCount_Gifs_GDU.gif') }}">
+    </div>
+
+    <!-- Stats Section -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-10">
+        <div class="card bg-base shadow-xl border-2 border-black">
+            <div class="card-body">
+                <h2 class="card-title">51% Decline in Air Passengers</h2>
+                <p>Air passenger numbers fell by 51% from January to May 2020 due to the pandemic.</p>
+            </div>
+        </div>
+
+        <div class="card bg-base shadow-xl border-2 border-black">
+            <div class="card-body">
+                <h2 class="card-title">35% Credit Access</h2>
+                <p>Only 35% of small-scale industries in developing countries have access to credit (2006-2018).</p>
+            </div>
+        </div>
+
+        <div class="card bg-base shadow-xl border-2 border-black">
+            <div class="card-body">
+                <h2 class="card-title">54% Global Internet Access</h2>
+                <p>As of 2019, only 54% of the global population uses the internet, with just 19% in least developed
+                    countries.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PDF and Resource Links Section -->
+    <div class="mt-10">
+        <h2 class="text-center text-3xl font-bold">Explore More Resources</h2>
+        <div class="flex flex-wrap justify-center mt-5">
+            <!-- PDF: Why It Matters -->
+            <a class="rounded btn-white border border-sdg-9 m-2 p-2 shadow-xl"
+               href=" {{ url_for('static', filename='images/sdg/9_Why-It-Matters-2020.pdf') }}"
+               target="_blank">
+                <img alt="PDF Icon"
+                     class="w-6 h-6 inline mr-2"
+                     src="https://cdn-icons-png.flaticon.com/512/10007/10007105.png">
+                Why Industry, Innovation, and Infrastructure Matter
+            </a>
+
+            <!-- PDF: Infographics -->
+            <a class="rounded btn-white border border-sdg-9 m-2 p-2 shadow-xl"
+               href="{{ url_for('static', filename='images/sdg/E_infographics_09.pdf') }}" target="_blank">
+                <img alt="PDF Icon" class="w-6 h-6 inline mr-2"
+                     src="https://cdn-icons-png.flaticon.com/512/10007/10007105.png">
+                Infographics on Innovation and Infrastructure
+            </a>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="mt-10 text-center">
+        <a class="btn bg-sdg-9 btn-lg" href="https://sdgs.un.org/goals/goal9" target="_blank">Learn More</a>
+    </div>
+</div>
+
+<!-- SDG GOAL - 11 -->
+
+<div class="text-sdg-11 m-12 p-10 border-4 rounded-lg border-sdg-11">
+    <!-- Title Section -->
+    <div class="text-center">
+        <h1 class="text-5xl font-bold">Sustainable Cities and Communities: SDG - 11</h1>
+        <p class="mt-4 text-2xl">Make cities inclusive, safe, resilient, and sustainable.</p>
+    </div>
+
+    <!-- Image and Icon Section -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
+        <div class="flex justify-center">
+            <img alt="Sustainable Cities Icon" class=""
+                 src="{{ url_for('static', filename='images/sdg/E_Elyx_11.png') }}">
+        </div>
+        <div class="flex justify-center items-center border-2 border-black">
+            <div class="bg-white text-sdg-11 p-5 rounded-lg shadow-lg">
+                <div class="flex flex-col justify-center items-center">
+                    <h2 class="text-4xl font-semibold">Why It Matters</h2>
+                    <p class="mt-4 text-lg text-gray-800">
+                        Over 90% of COVID-19 cases have occurred in urban areas, exposing the vulnerabilities of densely
+                        populated cities. Urban centers also face challenges such as air pollution, inadequate
+                        infrastructure, and unplanned growth.
+                    </p>
+                    <p class="mt-4 text-lg text-gray-800">
+                        Creating inclusive, safe, and resilient cities is crucial to ensure a better quality of life,
+                        reduce inequality, and combat climate change.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GIF Section (Visual Highlight) -->
+    <div class="flex justify-center m-5 mt-10">
+        <img alt="Sustainable Cities GIF" class="rounded-lg shadow-lg w-96 border-2 border-black"
+             src="{{ url_for('static', filename='images/sdg/E_GIF_11.gif') }}">&nbsp;
+        <img alt="Make Every Day Count"
+             class="rounded-lg shadow-lg w-96 border-2 border-black"
+             src="{{ url_for('static', filename='images/sdg/11_SDG_MakeEveryDayCount_Gifs_GDU.gif') }}">
+    </div>
+
+    <!-- Stats Section -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-10">
+        <div class="card bg-base shadow-xl border-2 border-black">
+            <div class="card-body">
+                <h2 class="card-title">24% Urban Slum Population</h2>
+                <p>As of 2018, 24% of the global urban population lived in slums.</p>
+            </div>
+        </div>
+
+        <div class="card bg-base shadow-xl border-2 border-black">
+            <div class="card-body">
+                <h2 class="card-title">90% of COVID-19 Cases in Urban Areas</h2>
+                <p>Over 90% of COVID-19 cases have occurred in urban areas, highlighting their vulnerabilities.</p>
+            </div>
+        </div>
+
+        <div class="card bg-base shadow-xl border-2 border-black">
+            <div class="card-body">
+                <h2 class="card-title">47% Proximity to Public Spaces</h2>
+                <p>Only 47% of the global urban population live within 400 meters of an open public space.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PDF and Resource Links Section -->
+    <div class="mt-10">
+        <h2 class="text-center text-3xl font-bold">Explore More Resources</h2>
+        <div class="flex flex-wrap justify-center mt-5">
+            <!-- PDF: Why It Matters -->
+            <a class="rounded btn-white border border-sdg-11 m-2 p-2 shadow-xl"
+               href=" {{ url_for('static', filename='images/sdg/11_Why-It-Matters-2020.pdf') }}"
+               target="_blank">
+                <img alt="PDF Icon"
+                     class="w-6 h-6 inline mr-2"
+                     src="https://cdn-icons-png.flaticon.com/512/10007/10007105.png">
+                Why Sustainable Cities Matter
+            </a>
+
+            <!-- PDF: Infographics -->
+            <a class="rounded btn-white border border-sdg-11 m-2 p-2 shadow-xl"
+               href="{{ url_for('static', filename='images/sdg/E_infographics_11.pdf') }}" target="_blank">
+                <img alt="PDF Icon" class="w-6 h-6 inline mr-2"
+                     src="https://cdn-icons-png.flaticon.com/512/10007/10007105.png">
+                Infographics on Sustainable Cities
+            </a>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="mt-10 text-center">
+        <a class="btn bg-sdg-11 btn-lg" href="https://sdgs.un.org/goals/goal11" target="_blank">Learn More</a>
+    </div>
+</div>
+
+<!-- SDG GOAL - 13 -->
+
+<div class="text-sdg-13 m-12 p-10 border-4 rounded-lg border-sdg-13">
+    <!-- Title Section -->
+    <div class="text-center">
+        <h1 class="text-5xl font-bold">Climate Action: SDG - 13</h1>
+        <p class="mt-4 text-2xl">Take urgent action to tackle climate change and its impacts.</p>
+    </div>
+
+    <!-- Image and Icon Section -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
+        <div class="flex justify-center">
+            <img alt="Climate Action Icon" class=""
+                 src="{{ url_for('static', filename='images/sdg/E_Elyx_13.png') }}">
+        </div>
+        <div class="flex justify-center items-center border-2 border-black">
+            <div class="bg-white text-sdg-13 p-5 rounded-lg shadow-lg">
+                <div class="flex flex-col justify-center items-center">
+                    <h2 class="text-4xl font-semibold">Why It Matters</h2>
+                    <p class="mt-4 text-lg text-gray-800">
+                        The climate crisis is intensifying, with 2010-2019 being the warmest decade ever recorded.
+                        Climate change is disrupting national economies, affecting lives, and exacerbating natural
+                        disasters such as wildfires, floods, and hurricanes.
+                    </p>
+                    <p class="mt-4 text-lg text-gray-800">
+                        We must limit global warming to 1.5°C to prevent further irreversible damage. Urgent action is
+                        required to reduce greenhouse gas emissions and build climate resilience.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GIF Section (Visual Highlight) -->
+    <div class="flex justify-center m-5 mt-10">
+        <img alt="Climate Action GIF" class="rounded-lg shadow-lg w-96 border-2 border-black"
+             src="{{ url_for('static', filename='images/sdg/E_GIF_13.gif') }}">&nbsp;
+        <img alt="Make Every Day Count"
+             class="rounded-lg shadow-lg w-96 border-2 border-black"
+             src="{{ url_for('static', filename='images/sdg/13_SDG_MakeEveryDayCount_Gifs_GDU.gif') }}">
+    </div>
+
+    <!-- Stats Section -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-10">
+        <div class="card bg-base shadow-xl border-2 border-black">
+            <div class="card-body">
+                <h2 class="card-title">7.6% Annual Reduction</h2>
+                <p>To limit global warming to 1.5°C, greenhouse gas emissions must fall by 7.6% every year starting in
+                    2020.</p>
+            </div>
+        </div>
+
+        <div class="card bg-base shadow-xl border-2 border-black">
+            <div class="card-body">
+                <h2 class="card-title">39 Million People Affected</h2>
+                <p>In 2018, more than 39 million people were affected by climate-related disasters.</p>
+            </div>
+        </div>
+
+        <div class="card bg-base shadow-xl border-2 border-black">
+            <div class="card-body">
+                <h2 class="card-title">$781 Billion Fossil Fuel Investment</h2>
+                <p>Investment in fossil fuels continues to exceed investment in climate activities, with $781 billion
+                    allocated in 2016 alone.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PDF and Resource Links Section -->
+    <div class="mt-10">
+        <h2 class="text-center text-3xl font-bold">Explore More Resources</h2>
+        <div class="flex flex-wrap justify-center mt-5">
+            <!-- PDF: Why It Matters -->
+            <a class="rounded btn-white border border-sdg-13 m-2 p-2 shadow-xl"
+               href=" {{ url_for('static', filename='images/sdg/13_Why-It-Matters-2020.pdf') }}"
+               target="_blank">
+                <img alt="PDF Icon"
+                     class="w-6 h-6 inline mr-2"
+                     src="https://cdn-icons-png.flaticon.com/512/10007/10007105.png">
+                Why Climate Action Matters
+            </a>
+
+            <!-- PDF: Infographics -->
+            <a class="rounded btn-white border border-sdg-13 m-2 p-2 shadow-xl"
+               href="{{ url_for('static', filename='images/sdg/E_infographics_13.pdf') }}" target="_blank">
+                <img alt="PDF Icon" class="w-6 h-6 inline mr-2"
+                     src="https://cdn-icons-png.flaticon.com/512/10007/10007105.png">
+                Infographics on Climate Action
+            </a>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="mt-10 text-center">
+        <a class="btn bg-sdg-13 btn-lg" href="https://sdgs.un.org/goals/goal13" target="_blank">Learn More</a>
+    </div>
+</div>
+
+<footer class="p-6 bg-primary text-center mt-4">
+    <p>&copy; <strong class="text-primary bg-black">Cache Memory</strong> 2024 - All Rights Reserved</p>
+    <p> Content for this page was taken from  <a class="link" href="https://sdgs.un.org" target="_blank">SDG UN ORG</a></p>
+</footer>
 </body>
 </html>

@@ -9,6 +9,11 @@ module.exports = {
         'jetbrains': ['"JetBrains Mono"', 'monospace'], // Add JetBrains Mono font
       },
       colors: {
+        'sdg-7':'#fac213',
+        'sdg-8':'#a31942',
+        'sdg-9' : '#fd6925',
+        'sdg-11':'#fd9d24',
+        'sdg-13':'#3f7e44',
         'red': '#FF0000',
         'green': '#00FF00',
         'blue': '#0000FF',
@@ -16,7 +21,7 @@ module.exports = {
         'purple': '#800080',
         'orange': '#FFA500',
         'pink': '#FFC0CB',
-        'cyan': '#00FFFF',
+        'cyan': '#34eba4',
         'lime': '#00FF00',
         'indigo': '#4B0082',
         'violet': '#EE82EE',
@@ -33,7 +38,7 @@ module.exports = {
     themes: [
       {
         cache: {
-          "primary": "#fcc55e",
+          "primary": "#ffa500",
           "secondary": "#0f766e",
           "accent": "#57534e",
           "neutral": "#fbcfe8",

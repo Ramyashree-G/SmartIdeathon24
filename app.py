@@ -13,7 +13,7 @@ def calculate_updated_values():
 
     solar_homes_increment_per_sec = 0.019
     co2_saved_increment_per_sec = 38
-    energy_generated_increment_per_sec = 95000
+    energy_generated_increment_per_sec = 95030
     time_diff = datetime.datetime.now() - base_time
     total_seconds = time_diff.total_seconds()
 
@@ -53,6 +53,9 @@ def grid():
     # this doesn't exist, so they will be rerouted to home page
     return render_template("grid.html")
 
+@app.route("/grid/sell")
+def sell():
+    return render_template("sell.html")
 
 if __name__ == '__main__':
     #app.run(debug=True)
