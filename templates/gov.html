@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html data-theme="cache" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Solar Initiatives</title>
+    <link href="{{ url_for('static', filename='images/favicon/favicon.ico') }}" rel="icon" type="image/vnd.microsoft.icon">
+    <link href="{{ url_for('static', filename='css/output.css') }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-jetbrains bg-base-100">
+<div class="navbar bg-base-100">
+    <div class="navbar-start">
+        <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor">
+                    <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 6h16M4 12h8m-8 6h16"/>
+                </svg>
+            </div>
+            <ul
+                    tabindex="0"
+                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                <li><a href="\home" >Home</a></li>
+                <li><a href="\market" >Market Place</a></li>
+                <li>
+                    <p>Grid</p>
+                    <ul class="p-2">
+                        <li><a href="\grid\buy" >Buy</a></li>
+                        <li><a href="\grid\sell">Sell</a></li>
+                    </ul>
+                </li>
+                <li><a href="/sdg" >SDG Goals</a></li>
+                <li><a class=" btn-outline btn-accent" href="/about-us">About Us</a></li>
+
+            </ul>
+        </div>
+        <a class="btn bg-black text-primary text-xl" href="\home">
+            Cache Memory
+        </a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+            <li><a class=" btn-outline btn-secondary" href="\market">Market Place</a></li>
+            <li>
+                <details>
+                    <summary>Grid</summary>
+                    <ul class="p-2">
+                        <li><a class=" btn-outline btn-warning" href="\grid\sell">Sell</a></li>
+                        <li><a class=" btn-outline btn-success" href="\grid\buy">Buy</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li><a class=" btn-outline btn-primary" href="/sdg">SDG Goals</a></li>
+            <li><a class=" btn-outline btn-accent" href="/about-us">About Us</a></li>
+
+        </ul>
+    </div>
+    <div class="navbar-end">
+        <a class="btn btn-outline btn-primary" href="{{ url_for('static', filename='pdf/Cache Memory.pdf') }}"
+           target="_blank">Research</a>
+    </div>
+</div>
+
+<div class="container mx-auto p-6 m-5">
+    <header class="p-6 bg-base-100 text-success text-center">
+        <h1 class="text-5xl font-bold">Government Solar Initiatives in India</h1>
+        <p class="m-4 p-4 text-accent font-bold">Explore India's commitment to solar energy for a sustainable future!</p>
+    </header>
+
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
+        <div class="bg-base-100 shadow-lg rounded-lg p-4">
+            <h2 class="text-xl font-semibold text-orange mb-2">National Solar Mission (JNNSM)</h2>
+            <p>Launched: 2010</p>
+            <p>Objective: Achieve 100 GW by 2022, targeting 280 GW by 2030. Promotes grid-connected solar plants and rooftop systems.</p>
+            <ul class="list-disc pl-4 mt-2">
+                <li>Encourages rooftop solar for all sectors.</li>
+                <li>Framework for state-level solar adoption.</li>
+                <li>Aims for grid parity and tariff reduction.</li>
+            </ul>
+        </div>
+
+        <div class="bg-base-100 shadow-lg rounded-lg p-4">
+            <h2 class="text-xl font-semibold text-orange mb-2">Solar Rooftop Scheme</h2>
+            <p>Implemented by: MNRE</p>
+            <ul class="list-disc pl-4 mt-2">
+                <li>Up to 40% subsidy for residential systems up to 3 kW.</li>
+                <li>20% subsidy for systems between 3-10 kW.</li>
+                <li>Net metering allows selling excess energy back to the grid.</li>
+            </ul>
+        </div>
+
+        <div class="bg-base-100 shadow-lg rounded-lg p-4">
+            <h2 class="text-xl font-semibold text-orange mb-2">KUSUM Scheme</h2>
+            <p>Launched: 2019</p>
+            <ul class="list-disc pl-4 mt-2">
+                <li>Component A: Grid-connected solar plants up to 2 MW by farmers.</li>
+                <li>Component B: Off-grid solar water pumps.</li>
+                <li>Component C: Solarization of grid-connected pumps.</li>
+                <li>60% of the cost is subsidized by the government.</li>
+            </ul>
+        </div>
+
+        <div class="bg-base-100 shadow-lg rounded-lg p-4">
+            <h2 class="text-xl font-semibold text-orange mb-2">Solar Parks & Ultra Mega Solar Projects</h2>
+            <p>Implemented by: MNRE</p>
+            <ul class="list-disc pl-4 mt-2">
+                <li>Government assists with land acquisition and infrastructure.</li>
+                <li>Target: Develop 50 Solar Parks with 40 GW capacity.</li>
+                <li>Key states: Rajasthan, Gujarat, MP, Karnataka, AP.</li>
+            </ul>
+        </div>
+
+        <div class="bg-base-100 shadow-lg rounded-lg p-4">
+            <h2 class="text-xl font-semibold text-orange mb-2">PM-KUSUM</h2>
+            <p>Launched: 2019</p>
+            <ul class="list-disc pl-4 mt-2">
+                <li>Component A: Solar plants (up to 2 MW) on farmers' barren land.</li>
+                <li>Subsidies for standalone solar pumps for irrigation.</li>
+                <li>Solarization of existing grid-connected pumps.</li>
+            </ul>
+        </div>
+
+        <div class="bg-base-100 shadow-lg rounded-lg p-4">
+            <h2 class="text-xl font-semibold text-orange mb-2">Development of Solar Cities</h2>
+            <p>Objective: Reduce conventional energy dependency by 10% through renewable energy.</p>
+            <ul class="list-disc pl-4 mt-2">
+                <li>Target: Develop 60 solar cities.</li>
+                <li>Promote solar technology in public and private sectors.</li>
+                <li>Provide funding support for solar projects.</li>
+            </ul>
+        </div>
+
+        <div class="bg-base-100 shadow-lg rounded-lg p-4">
+            <h2 class="text-xl font-semibold text-orange mb-2">Atal Jyoti Yojana (AJAY)</h2>
+            <p>Launched by: MNRE</p>
+            <ul class="list-disc pl-4 mt-2">
+                <li>Install solar-powered streetlights in rural and semi-urban areas.</li>
+                <li>Focus on districts with low electricity access.</li>
+                <li>Emphasis on backward districts and border areas.</li>
+            </ul>
+        </div>
+
+        <div class="bg-base-100 shadow-lg rounded-lg p-4">
+            <h2 class="text-xl font-semibold text-orange mb-2">Solar Manufacturing & ‘Make in India’</h2>
+            <p>Objective: Boost domestic manufacturing of solar equipment, reducing imports.</p>
+            <ul class="list-disc pl-4 mt-2">
+                <li>Production Linked Incentive (PLI) for solar PV manufacturing.</li>
+                <li>Custom duties on imported solar panels.</li>
+                <li>Solar SEZs with tax incentives.</li>
+            </ul>
+        </div>
+
+        <div class="bg-base-100 shadow-lg rounded-lg p-4">
+            <h2 class="text-xl font-semibold text-orange mb-2">Green Energy Corridor</h2>
+            <p>Objective: Develop a dedicated transmission network for renewable energy.</p>
+            <ul class="list-disc pl-4 mt-2">
+                <li>Funded by the Indian government and international agencies.</li>
+                <li>Integrate large-scale renewable energy into the national grid.</li>
+            </ul>
+        </div>
+
+        <div class="bg-base-100 shadow-lg rounded-lg p-4">
+            <h2 class="text-xl font-semibold text-orange mb-2">International Solar Alliance (ISA)</h2>
+            <p>Launched: 2015</p>
+            <ul class="list-disc pl-4 mt-2">
+                <li>India leads global solar energy efforts, especially in tropical countries.</li>
+                <li>Promotes solar adoption and cost reduction globally.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="text-center p-6">
+        <a class="btn btn-success btn-lg" href="https://mnre.gov.in/solar-overview/">Learn More</a>
+    </section>
+</div>
+
+<footer class="p-6 bg-primary text-center mt-5">
+    <p>&copy; <strong class="text-primary bg-black">Cache Memory</strong> 2024 - All Rights Reserved</p>
+</footer>
+</body>
+</html>
