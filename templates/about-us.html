@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html data-theme="cache" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>About Us</title>
+    <link href="{{ url_for('static', filename='images/favicon/favicon.ico') }}" rel="icon"
+          type="image/vnd.microsoft.icon">
+    <link href="{{ url_for('static', filename='css/output.css') }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-jetbrains bg-base-100">
+
+<div class="navbar bg-base-100">
+    <div class="navbar-start">
+        <div class="dropdown">
+            <div class="btn btn-ghost lg:hidden" role="button" tabindex="0">
+                <svg
+                        class="h-5 w-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                    <path
+                            d="M4 6h16M4 12h8m-8 6h16"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"/>
+                </svg>
+            </div>
+            <ul
+                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+                    tabindex="0">
+                <li><a href="\home">Home</a></li>
+                <li><a href="\market">Market Place</a></li>
+                <li>
+                    <p>Grid</p>
+                    <ul class="p-2">
+                        <li><a href="\grid\buy">Buy</a></li>
+                        <li><a href="\grid\sell">Sell</a></li>
+                    </ul>
+                </li>
+                <li><a href="/sdg">SDG Goals</a></li>
+                <li><a class="btn-outline btn-accent" href="/about-us">About Us</a></li>
+            </ul>
+        </div>
+        <a class="btn bg-black text-primary text-xl" href="\home">
+            Cache Memory
+        </a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+            <li><a class="btn-outline btn-secondary" href="\market">Market Place</a></li>
+            <li>
+                <details>
+                    <summary>Grid</summary>
+                    <ul class="p-2">
+                        <li><a class="btn-outline btn-warning" href="\grid\sell">Sell</a></li>
+                        <li><a class="btn-outline btn-success" href="\grid\buy">Buy</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li><a class="btn-outline btn-primary" href="/sdg">SDG Goals</a></li>
+            <li><a class="btn-outline btn-accent" href="/about-us">About Us</a></li>
+        </ul>
+    </div>
+    <div class="navbar-end">
+        <a class="btn btn-outline btn-primary" href="{{ url_for('static', filename='pdf/Cache Memory.pdf') }}"
+           target="_blank">Research</a>
+    </div>
+</div>
+
+<div class="container mx-auto p-6">
+    <section class="mt-12 ml-12 mr-12 mb-5 bg-base-100 p-6 rounded-lg text-center">
+        <h2 class="m-2 text-5xl font-semibold text-success">
+            The Team building Future of Solar Energy🎉
+        </h2>
+        <p><strong class="text-accent font-bold">Where Sustainable Choices Are Instantly Available, One Solar Panel at a
+            Time!</strong></p>
+    </section>
+
+    <!-- About Us Section - Vertical Layout -->
+    <section class="m-5 p-6 bg-base-100 border border-success rounded-lg flex flex-col items-center space-y-10">
+        <!-- Team Member 1 - Apoorv Gadiya -->
+        <div class="team-member flex flex-col items-center">
+            <div class="avatar mb-4 ">
+                <div class="rounded-full w-28">
+                    <img alt="Apoorv Gadiya" src="{{ url_for('static', filename='images/about/apoorv.jpg') }}">
+                </div>
+            </div>
+            <div class="details text-center">
+                <h2 class="text-xl font-semibold text-success mb-2">Apoorv Gadiya</h2>
+                <p class="text-gray-700">BTech (Hons) Computer Science and Engineering</p>
+                <p class="text-gray-700">RV University</p>
+                <p>LinkedIn: <a class="text-red" href="https://www.linkedin.com/in/apoorv-g7/" target="_blank">linkedin.com/in/apoorv-g7</a>
+                </p>
+                <p>GitHub: <a class="text-red" href="https://github.com/APOORV7G"
+                              target="_blank">github.com/APOORV7G</a></p>
+            </div>
+            <div class="divider"></div>
+        </div>
+
+        <!-- Team Member 2 - Ramyashree G -->
+        <div class="team-member flex flex-col items-center">
+            <div class="avatar mb-4 ">
+                <div class="mask mask-hexagon w-28">
+                    <img alt="Ramyashree G" src="{{ url_for('static', filename='images/about/ramya.jpg') }}">
+                </div>
+            </div>
+            <div class="details text-center">
+                <h2 class="text-xl font-semibold text-success mb-2">Ramyashree G</h2>
+                <p class="text-gray-700">BSc (Hons) Computer Science</p>
+                <p class="text-gray-700">RV University</p>
+                <p>LinkedIn: <a class="text-red" href="https://www.linkedin.com/in/ramyashree-g-6aaab8290"
+                                target="_blank">linkedin.com/in/ramyashree-g</a></p>
+                <p>GitHub: <a class="text-red" href="https://github.com/Ramyashree-G" target="_blank">github.com/Ramyashree-G</a>
+                </p>
+            </div>
+            <div class="divider"></div>
+        </div>
+
+        <!-- Team Member 3 - Manasa C S -->
+        <div class="team-member flex flex-col items-center">
+            <div class="avatar mb-4">
+                <div class="mask mask-squircle w-28">
+                    <img alt="Manasa C S" src="{{ url_for('static', filename='images/about/manasa.jpg') }}">
+                </div>
+            </div>
+            <div class="details text-center">
+                <h2 class="text-xl font-semibold text-success mb-2">Manasa C S</h2>
+                <p class="text-gray-700">BSc (Hons) Computer Science</p>
+                <p class="text-gray-700">RV University</p>
+                <p>LinkedIn: <a class="text-red" href="https://www.linkedin.com/in/manasa-c-s-304a25296/"
+                                target="_blank">linkedin.com/in/manasa-c-s</a></p>
+                <p>GitHub: <a class="text-red" href="https://github.com/Hamsa7019"
+                              target="_blank">github.com/Hamsa7019</a></p>
+            </div>
+            <div class="divider"></div>
+        </div>
+    </section>
+</div>
+<section class="mt-12 ml-12 mr-12 mb-5 bg-base-100 p-6 rounded-lg text-center">
+    <h2 class="m-2 btn bg-black text-5xl font-semibold text-primary">
+        Cache Memory
+    </h2>
+
+    <!-- Centering the logo -->
+    <div class="flex justify-center">
+        <img alt="logo" class="mx-auto p-5" src="{{ url_for('static', filename='images/favicon/favicon transparent.png') }}">
+    </div>
+
+    <p><strong class="text-accent font-bold"> Website Developed for Sustain Fiesta 2024 . All Rights Reserved.</strong>
+        <br>
+        All the details for the content used on the website can be found @
+        <a class="btn-outline btn-info" href="mailto:apoorvg.btech23@rvu.edu.in">Mail</a>
+        <br>
+        Due Credits Given.
+    </p>
+</section>
+
+<footer class="p-6 bg-primary text-white text-center">
+    <p>&copy; 2024 Cache Memory - All Rights Reserved</p>
+</footer>
+</body>
+</html>

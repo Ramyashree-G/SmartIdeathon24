@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Grid Sell</title>
-    <link href="{{ url_for('static', filename='images/favicon/favicon 256x256.ico') }}" rel=icon
+    <link href="{{ url_for('static', filename='images/favicon/favicon.ico') }}" rel=icon
           type="image/vnd.microsoft.icon">
     <link href="{{ url_for('static', filename='css/output.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -13,33 +13,34 @@
 <div class="navbar bg-base-100">
     <div class="navbar-start">
         <div class="dropdown">
-            <div class="btn btn-ghost lg:hidden" role="button" tabindex="0">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                 <svg
+                        xmlns="http://www.w3.org/2000/svg"
                         class="h-5 w-5"
                         fill="none"
-                        stroke="currentColor"
                         viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
+                        stroke="currentColor">
                     <path
-                            d="M4 6h16M4 12h8m-8 6h16"
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                            stroke-width="2"/>
+                            stroke-width="2"
+                            d="M4 6h16M4 12h8m-8 6h16"/>
                 </svg>
             </div>
             <ul
-                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
-                    tabindex="0">
-                <li><a href="\home">Home</a></li>
-                <li><a href="\market">Market Place</a></li>
+                    tabindex="0"
+                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                <li><a href="\home" >Home</a></li>
+                <li><a href="\market" >Market Place</a></li>
                 <li>
                     <p>Grid</p>
                     <ul class="p-2">
-                        <li><a href="\grid\buy">Buy</a></li>
+                        <li><a href="\grid\buy" >Buy</a></li>
                         <li><a href="\grid\sell">Sell</a></li>
                     </ul>
                 </li>
-                <li><a href="/sdg">SDG Goals</a></li>
+                <li><a href="/sdg" >SDG Goals</a></li>
+                <li><a class=" btn-outline btn-accent" href="/about-us">About Us</a></li>
 
             </ul>
         </div>
@@ -60,6 +61,8 @@
                 </details>
             </li>
             <li><a class=" btn-outline btn-primary" href="/sdg">SDG Goals</a></li>
+            <li><a class=" btn-outline btn-accent" href="/about-us">About Us</a></li>
+
         </ul>
     </div>
     <div class="navbar-end">

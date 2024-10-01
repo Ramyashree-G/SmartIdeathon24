@@ -64,6 +64,11 @@ def buy():
     return render_template("buy.html")
 
 
+@app.route("/about-us")
+def about():
+    return render_template("about-us.html")
+
+
 if __name__ == '__main__':
     # app.run(debug=True)
     app.run(host="0.0.0.0", port=56000)
