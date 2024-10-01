@@ -53,10 +53,17 @@ def grid():
     # this doesn't exist, so they will be rerouted to home page
     return render_template("grid.html")
 
+
 @app.route("/grid/sell")
 def sell():
     return render_template("sell.html")
 
+
+@app.route("/grid/buy")
+def buy():
+    return render_template("buy.html")
+
+
 if __name__ == '__main__':
-    #app.run(debug=True)
+    # app.run(debug=True)
     app.run(host="0.0.0.0", port=56000)
