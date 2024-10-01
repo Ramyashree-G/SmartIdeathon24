@@ -30,18 +30,17 @@
             <ul
                     tabindex="0"
                     class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                <li><a href="\home" >Home</a></li>
-                <li><a href="\market" >Market Place</a></li>
+                <li><a href="\home">Home</a></li>
+                <li><a href="\market">Market Place</a></li>
                 <li>
                     <p>Grid</p>
                     <ul class="p-2">
-                        <li><a href="\grid\buy" >Buy</a></li>
+                        <li><a href="\grid\buy">Buy</a></li>
                         <li><a href="\grid\sell">Sell</a></li>
                     </ul>
                 </li>
-                <li><a href="/sdg" >SDG Goals</a></li>
-                <li><a class=" btn-outline btn-accent" href="/about-us">About Us</a></li>
-
+                <li><a href="/sdg">SDG Goals</a></li>
+                <li><a class="btn-outline btn-accent" href="/about-us">About Us</a></li>
             </ul>
         </div>
         <a class="btn bg-black text-primary text-xl" href="\home">
@@ -50,19 +49,18 @@
     </div>
     <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
-            <li><a class=" btn-outline btn-secondary" href="\market">Market Place</a></li>
+            <li><a class="btn-outline btn-secondary" href="\market">Market Place</a></li>
             <li>
                 <details>
                     <summary>Grid</summary>
                     <ul class="p-2">
-                        <li><a class=" btn-outline btn-warning" href="\grid\sell">Sell</a></li>
-                        <li><a class=" btn-outline btn-success" href="\grid\buy">Buy</a></li>
+                        <li><a class="btn-outline btn-warning" href="\grid\sell">Sell</a></li>
+                        <li><a class="btn-outline btn-success" href="\grid\buy">Buy</a></li>
                     </ul>
                 </details>
             </li>
-            <li><a class=" btn-outline btn-primary" href="/sdg">SDG Goals</a></li>
-            <li><a class=" btn-outline btn-accent" href="/about-us">About Us</a></li>
-
+            <li><a class="btn-outline btn-primary" href="/sdg">SDG Goals</a></li>
+            <li><a class="btn-outline btn-accent" href="/about-us">About Us</a></li>
         </ul>
     </div>
     <div class="navbar-end">
@@ -70,32 +68,29 @@
            target="_blank">Research</a>
     </div>
 </div>
+
 <div class="container mx-auto p-6">
     <header class="p-6 bg-base-100 text-orange text-center">
-    <h1 class="text-5xl fg-secondary font-bold">Producing Excess of Solar Energy ?🌞</h1>
-        <p class="m-2 p-4"><strong class=" m-2 p-4 text-accent font-bold"> Sell your excess energy to the grid and get the best 🪙 ₹₹₹!</strong>
+        <h1 class="text-5xl text-secondary font-bold">Producing Excess of Solar Energy? 🌞</h1>
+        <p class="m-2 p-4">
+            <strong class="m-2 p-4 text-accent font-bold">Sell your excess energy to the grid and get the best 🪙 ₹₹₹!</strong>
         </p>
-</header>
+    </header>
+
     <section class="m-5 bg-orange text-black text-3xl p-6 rounded-lg text-center">
-        What is the grid ?
+        What is the grid?
     </section>
-    <section
-            class="m-5 p-6 bg-base-100 border border-orange rounded-lg flex flex-col md:flex-row justify-between items-center">
+
+    <section class="m-5 p-6 bg-base-100 border border-orange rounded-lg flex flex-col md:flex-row justify-between items-center">
         <section class="text-black md:w-2/3 m-2">
             <h2 class="text-xl font-semibold text-orange mb-4">Grid-Connected Solar Systems</h2>
             <p class="mb-4">
                 In solar energy, the grid refers to the electrical power network that delivers electricity from power
-                plants
-                to homes and businesses. Grid-connected solar systems allow homeowners to generate their own electricity
-                with solar panels, feeding any excess power back into the grid when their needs are met.
+                plants to homes and businesses. Grid-connected solar systems allow homeowners to generate their own electricity with solar panels, feeding any excess power back into the grid when their needs are met.
             </p>
-            <ul class="mb-4" style="list-style-type: square;">
-                <li class="text-indigo">Homeowners can draw power from the grid when solar production is low (e.g., at
-                    night).
-                </li>
-                <li class="text-brown">Excess solar power is sent back to the grid, earning credits through net
-                    metering.
-                </li>
+            <ul class="mb-4 list-disc pl-6">
+                <li class="text-indigo">Homeowners can draw power from the grid when solar production is low (e.g., at night).</li>
+                <li class="text-brown">Excess solar power is sent back to the grid, earning credits through net metering.</li>
                 <li class="text-purple">Most systems rely on the grid without the need for battery storage.</li>
             </ul>
             <p class="mb-4">
@@ -104,29 +99,29 @@
         </section>
         <section class="md:w-1/3 mt-6 md:mt-0">
             <img src="{{ url_for('static', filename='images/grid/grid.jpg') }}" alt="Solar Panels"
-                 class="bg-base-100 rounded-lg">
+                 class="bg-base-100 rounded-lg object-cover w-full h-full">
         </section>
     </section>
 
     <section class="m-5 bg-neutral text-black text-3xl p-6 rounded-lg text-center">
         Cost Comparator: Normal Electricity Vs Solar Electricity Calculator
     </section>
-    <div class="flex justify-center p-6 border border-neutral m-5 rounded-lg">
-        <div class="flex flex-col items-center p-4 border-r border-gray-300">
+
+    <div class="flex flex-col md:flex-row justify-center p-6 border border-neutral m-5 rounded-lg">
+        <div class="flex flex-col items-center p-4 border-r border-gray-300 mb-4 md:mb-0">
             <h2 class="text-lg font-bold">Normal Electricity Calculator</h2>
-            <input type="range" min="100" max="1000" value="500" class="range range-primary w-64" id="normalUsage"
-                   oninput="updateBoth(this.value)">
+            <input type="range" min="100" max="1000" value="500" class="range range-primary w-64" id="normalUsage" oninput="updateBoth(this.value)">
             <span class="mt-2 text-lg" id="normalValue">500</span> units/month
             <div class="mt-4 text-lg text-error" id="normalResult"></div>
         </div>
         <div class="flex flex-col items-center p-4">
             <h2 class="text-lg font-bold">Solar Electricity Calculator</h2>
-            <input type="range" min="100" max="1000" value="500" class="range range-secondary w-64" id="solarUsage"
-                   oninput="updateBoth(this.value)">
+            <input type="range" min="100" max="1000" value="500" class="range range-secondary w-64" id="solarUsage" oninput="updateBoth(this.value)">
             <span class="mt-2 text-lg" id="solarValue">500</span> units/month
             <div class="mt-4 text-lg text-success" id="solarResult"></div>
         </div>
     </div>
+
     <div class="m-5 text-center p-4">
         <section class="m-5 bg-black text-white text-4xl p-6 rounded-lg text-center">
             Difference
@@ -134,80 +129,59 @@
             <small class="text-white text-sm block m-4 mt-2 text-center ">
                 Data collected from
                 <a class="text-primary"
-                   href="https://cercind.gov.in/2023/market_monitoring/Annual%20Report%202022-23.pdf">
-                    Central Electricity Regulatory Commission </a>
+                   href="https://cercind.gov.in/2023/market_monitoring/Annual%20Report%202022-23.pdf">Central Electricity Regulatory Commission</a>
             </small>
-            <small class="text-gray text-xs block m-4 mt-2 text-center">
-                Data has been tested only for a very specific use case. Please check local rates.
-            </small>
-
+            <small class="text-gray text-xs block m-4 mt-2 text-center">Data has been tested only for a very specific use case. Please check local rates.</small>
         </section>
     </div>
-    <!-- Main Section -->
+
     <section class="m-5 bg-cyan text-black text-3xl p-6 rounded-lg text-center">
         Sell Your Excess Solar Energy: Turn Energy Into Profit
     </section>
 
-    <!-- Timeline for Stakeholders Section -->
     <section class="m-5 p-6 bg-base-100 border border-cyan rounded-lg">
-        <h2 class="text-xl font-semibold text-left text-cyan mb-6">Key Stakeholders in the Solar Energy
-            Market</h2>
+    <h2 class="text-xl font-semibold text-left text-cyan mb-6">Key Stakeholders in the Solar Energy Market</h2>
 
-        <!-- Timeline Component -->
-        <div class="timeline">
-            <!-- User Section (Text Up) -->
-            <div class="timeline-item flex items-start">
-                <div class="timeline-point bg-indigo"></div>
-                <div class="timeline-content w-full ml-4">
-                    <h3 class="text-xl font-semibold text-indigo">1. You—the Solar Producer and Consumer</h3>
-                    <p class="text-black">
-                        As a producer, generate your own solar energy and sell excess back to the grid. As a consumer,
-                        enjoy cheaper electricity and offset your costs.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Electric Companies Section (Text Down) -->
-            <div class="timeline-item flex items-end">
-                <div class="timeline-point bg-brown"></div>
-                <div class="timeline-content w-full ml-4">
-                    <h3 class="text-xl font-semibold text-brown">2. Electric Companies</h3>
-                    <p class="text-black">
-                        Electric companies benefit from purchasing your surplus solar energy but face challenges with
-                        losses in traditional energy supply.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Government Section (Text Up) -->
-            <div class="timeline-item flex items-start">
-                <div class="timeline-point bg-purple"></div>
-                <div class="timeline-content w-full ml-4">
-                    <h3 class="text-xl font-semibold text-purple">3. Government</h3>
-                    <p class="text-black">
-                        By supporting solar energy, the government reduces strain on public power infrastructure,
-                        promoting sustainable, decentralized solutions.
-                    </p>
-                </div>
-            </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Card 1: Solar Producer and Consumer -->
+        <div class="card bg-white shadow-lg p-4 rounded-lg border border-indigo">
+            <h3 class="text-xl font-semibold text-indigo mb-2">1. You—the Solar Producer and Consumer</h3>
+            <p class="text-black">
+                As a producer, generate your own solar energy and sell excess back to the grid. As a consumer, enjoy cheaper electricity and offset your costs.
+            </p>
         </div>
-    </section>
 
-    <!-- Radial Progress Section -->
+        <!-- Card 2: Electric Companies -->
+        <div class="card bg-white shadow-lg p-4 rounded-lg border border-brown">
+            <h3 class="text-xl font-semibold text-brown mb-2">2. Electric Companies</h3>
+            <p class="text-black">
+                Electric companies benefit from purchasing your surplus solar energy but face challenges with losses in traditional energy supply.
+            </p>
+        </div>
+
+        <!-- Card 3: Government -->
+        <div class="card bg-white shadow-lg p-4 rounded-lg border border-purple">
+            <h3 class="text-xl font-semibold text-purple mb-2">3. Government</h3>
+            <p class="text-black">
+                By supporting solar energy, the government reduces strain on public power infrastructure, promoting sustainable, decentralized solutions.
+            </p>
+        </div>
+    </div>
+</section>
+
+
     <section class="m-5 p-6 bg-cyan-100 border border-cyan rounded-lg text-left">
         <h2 class="text-xl font-semibold text-left text-cyan mb-6">Maximize Your Solar Investment</h2>
 
-        <!-- Radial Progress 1 -->
-        <div class="flex mb-6 text-left">
+        <div class="flex flex-col md:flex-row mb-6">
             <div class="radial-progress text-primary" style="--value:80;">80%</div>
             <div class="ml-4 text-black">
                 <p class="font-semibold">Quick Return on Investment</p>
-                <p>Recover your investment in as little as three year.</p>
+                <p>Recover your investment in as little as three years.</p>
             </div>
         </div>
 
-        <!-- Radial Progress 2 -->
-        <div class="flex mb-6 ">
+        <div class="flex flex-col md:flex-row mb-6">
             <div class="radial-progress text-warning" style="--value:60;">60%</div>
             <div class="ml-4 text-black">
                 <p class="font-semibold">Efficient Power Usage</p>
@@ -215,8 +189,7 @@
             </div>
         </div>
 
-        <!-- Radial Progress 3 -->
-        <div class="flex mb-6">
+        <div class="flex flex-col md:flex-row mb-6">
             <div class="radial-progress text-success" style="--value:90;">90%</div>
             <div class="ml-4 text-black">
                 <p class="font-semibold">Profit from Excess Energy</p>
@@ -228,7 +201,6 @@
 
 <script>
     function updateBoth(value) {
-        // Update the values for both normal and solar sliders
         document.getElementById('normalValue').innerText = value;
         document.getElementById('solarValue').innerText = value;
         document.getElementById('normalUsage').value = value;
@@ -236,7 +208,7 @@
 
         calculateNormal(value);
         calculateSolar(value);
-        calculateDiff(); // Update difference
+        calculateDiff();
     }
 
     function calculateDiff() {
@@ -251,13 +223,13 @@
     }
 
     function calculateNormal(value) {
-        const costPerUnit = 6.29; // Normal electricity rate
+        const costPerUnit = 6.29;
         const totalCost = value * costPerUnit;
         document.getElementById('normalResult').innerText = `Estimated Monthly Cost: ₹${totalCost.toFixed(2)}`;
     }
 
     function calculateSolar(value) {
-        const solarCostPerUnit = 4.5; // Solar electricity cost
+        const solarCostPerUnit = 4.5;
         const totalSolarCost = value * solarCostPerUnit;
         document.getElementById('solarResult').innerText = `Estimated Monthly Solar Cost: ₹${totalSolarCost.toFixed(2)}`;
     }
@@ -269,12 +241,11 @@
         <small class="text-gray text-xs block m-4 mt-2 text-center">
             ^Terms and Conditions applied.
         </small>
-
     </section>
 </div>
-<footer class="p-6 bg-primary  text-center mt-4">
+
+<footer class="p-6 bg-primary text-center mt-4">
     <p>&copy; <strong class="text-primary bg-black">Cache Memory</strong> 2024 - All Rights Reserved</p>
 </footer>
-
 </body>
 </html>
